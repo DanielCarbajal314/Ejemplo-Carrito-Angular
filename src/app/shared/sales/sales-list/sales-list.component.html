@@ -1,0 +1,10 @@
+<mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Buscar por : </mat-label>
+    <input matInput [formControl]="searchTerm">
+</mat-form-field>
+<div fxLayout="row" layout-wrap fxlayoutgap="10px grid" >
+    <div *ngFor="let item of visibleItems" fxflex="30" >
+        <sales-item-displayer  [model]="item"  ></sales-item-displayer>
+    </div>
+</div>
+
